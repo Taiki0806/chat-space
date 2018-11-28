@@ -20,10 +20,11 @@
 |id|integer|null: false, unique: true|
 |name|string|null: false|
 |email|string|null: false, unique: true|
-*devise
+
+- その他はdeviseにて生成
 
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :members
 - has_many :groups through: :members
 
