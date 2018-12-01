@@ -1,0 +1,29 @@
+.flash
+
+/ sidebar
+.sidebar
+  .sidebar__user-menu
+    %p.sidebar__user-menu__user-name test
+    %a.sidebar__user-menu__edit-link.fa.fa-cog{href: "#"}
+    %a.sidebar__user-menu__new-link.fa.fa-pencil-square-o{href: "#"}
+  .sidebar__group-list
+    %p.sidebar__group-list__title taiki
+    %p.sidebar__group-list__comment hello
+
+/ menuview
+.chat-main
+  .chat-main__header
+    %p.chat-main__header__group-name sampleグループ
+    %a.chat-main__header__edit-button{href: "#"} Edit
+    %p.chat-main__header__group-member Member
+  .chat-main__content
+    .chat-main__message
+      %p.chat-main__message__name taiki
+      %p.chat-main__message__text yahoo!
+  .chat-main__footer
+    %form.chat-main__footer__form
+      %input.chat-main__footer__form__message{type: "text", placeholder: "type a message"}
+      %label.chat-main__footer__form__label{for: "icon"}
+        %input.chat-main__footer__form__label__file{type: "file", id: "icon"}
+        %i.chat-main__footer__form__label__picture.fa.fa-picture-o
+      %input.chat-main__footer__form__send-button{type: "submit", value: "Send"}
