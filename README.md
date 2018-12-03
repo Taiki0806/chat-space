@@ -18,7 +18,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 
 - その他はdeviseにて生成
@@ -34,7 +34,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
