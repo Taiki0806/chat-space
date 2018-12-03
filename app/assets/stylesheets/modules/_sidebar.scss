@@ -1,0 +1,153 @@
+
+.flash {
+  background-color: $blue;
+}
+
+// sidebar
+.sidebar {
+        width: 300px;
+        background-color: $navy-light;
+        min-height: 100vh;
+        position: fixed;
+        z-index: 1;
+                      &__user-menu {
+                                width: 300px;
+                                background-color: $navy;
+                                height: 100px;
+                                &__user-name {
+                                  color: $white;
+                                  font-size: 16px;
+                                  font-weight: bold;
+                                  padding: 35px 0px 0px 20px;
+                                  float: left;
+                                }
+                                &__edit-link {
+                                  line-height: 100px;
+                                  color: $white;
+                                  font-size: 16px;
+                                  font-weight: bold;
+                                  padding-right: 20px;
+                                  float: right;
+                                }
+                                &__new-link {
+                                  line-height: 100px;
+                                  color: $white;
+                                  font-size: 16px;
+                                  font-weight: bold;
+                                  padding-right: 10px;
+                                  float: right;
+                                }
+                      }
+                      &__group-list {
+                                height: 91px;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                &__title {
+                                  color: $white;
+                                  font-size: 15px;
+                                  padding-top: 20px;
+                                  padding-bottom: 5px;
+                                }
+                                &__comment {
+                                  color: $white;
+                                  font-size: 11px;
+                                  padding-bottom: 40px;
+                                }
+                      }
+}
+
+// mainview
+.chat-main {
+            min-height: 100vh;
+            background-color: $gray;
+            &__header {
+                      background-color: $white;
+                      height: 100px;
+                      width: 100%;
+                      border-bottom: solid 1px $border-line-gray;
+                      float: right;
+                      position: fixed;
+                      &__group-name {
+                        padding: 35px 0px 15px 340px;
+                        font-size: 20px;
+                        color: $group-name-black;
+                        float: left;
+                      }
+                      &__edit-button {
+                        font-size: 15px;
+                        color: $skyblue;
+                        border: solid 2px $skyblue;
+                        padding: 8px 20px;
+                        float: right;
+                        margin: 28px 40px 0px 840px;
+                        position: fixed;
+                      }
+                      &__group-member {
+                        padding-left: 340px;
+                        font-size: 12px;
+                        color: $information-gray;
+                        clear: both;
+                      }
+            }
+            &__content {
+                      clear: both;
+                      padding: 146px 40px 40px 340px;
+                      position: relative;
+                        &__message-block {
+                                  padding-bottom: 40px;
+                                    &__name {
+                                      margin-right: 10px;
+                                      font-size: 16px;
+                                      color: $black;
+                                      font-weight: bold;
+                                      display: inline-block;
+                                    }
+                                    &__time {
+                                      font-size: 12px;
+                                      color: $information-gray;
+                                      display: inline-block;
+                                    }
+                                    &__text {
+                                      font-size: 14px;
+                                      color: $black;
+                                    }
+                        }
+            }
+            &__footer {
+              background-color: $footer-gray;
+              height: 90px;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              position: fixed;
+                      &__form {
+                        padding-left: 340px;
+                                            &__message-form {
+                                              margin-top: 20px;
+                                              height: 50px;
+                                              width: 940px;
+                                              text-indent: 10px;
+                                              color: $black;
+                                              font-size: 16px;
+                                            }
+                                            &__label {
+                                              position: absolute;
+                                              bottom: 30px;
+                                              right: 170px;
+                                                      &__file{
+                                                        display: none;
+                                                      }
+                                            }
+                                            &__send-button {
+                                              background-color: $blue;
+                                              height: 50px;
+                                              color: $white;
+                                              width: 100px;
+                                              margin-top: 20px;
+                                              margin-bottom: 20px;
+                                              margin-left: 15px;
+                                              position: fixed;
+                                            }
+                    }
+            }
+}
