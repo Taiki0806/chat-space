@@ -1,20 +1,21 @@
+
 .flash {
-  background-color: #38AEF0;
+  background-color: $blue;
 }
 
 // sidebar
 .sidebar {
         width: 300px;
-        background-color: #2f3e51;
+        background-color: $navy-light;
         min-height: 100vh;
         position: fixed;
         z-index: 1;
                       &__user-menu {
                                 width: 300px;
-                                background-color: #253141;
+                                background-color: $navy;
                                 height: 100px;
                                 &__user-name {
-                                  color: #ffffff;
+                                  color: $white;
                                   font-size: 16px;
                                   font-weight: bold;
                                   padding: 35px 0px 0px 20px;
@@ -22,7 +23,7 @@
                                 }
                                 &__edit-link {
                                   line-height: 100px;
-                                  color: #ffffff;
+                                  color: $white;
                                   font-size: 16px;
                                   font-weight: bold;
                                   padding-right: 20px;
@@ -30,7 +31,7 @@
                                 }
                                 &__new-link {
                                   line-height: 100px;
-                                  color: #ffffff;
+                                  color: $white;
                                   font-size: 16px;
                                   font-weight: bold;
                                   padding-right: 10px;
@@ -42,13 +43,13 @@
                                 padding-left: 20px;
                                 padding-right: 20px;
                                 &__title {
-                                  color: #ffffff;
+                                  color: $white;
                                   font-size: 15px;
                                   padding-top: 20px;
                                   padding-bottom: 5px;
                                 }
                                 &__comment {
-                                  color: #ffffff;
+                                  color: $white;
                                   font-size: 11px;
                                   padding-bottom: 40px;
                                 }
@@ -58,24 +59,24 @@
 // mainview
 .chat-main {
             min-height: 100vh;
-            background-color: #FAFAFA;
+            background-color: $gray;
             &__header {
-                      background-color: #FFFFFF;
+                      background-color: $white;
                       height: 100px;
                       width: 100%;
-                      border-bottom: solid 1px #eeeeee;
+                      border-bottom: solid 1px $border-line-gray;
                       float: right;
                       position: fixed;
                       &__group-name {
                         padding: 35px 0px 15px 340px;
                         font-size: 20px;
-                        color: #333333;
+                        color: $group-name-black;
                         float: left;
                       }
                       &__edit-button {
                         font-size: 15px;
-                        color: #67c5ff;
-                        border: solid 2px #67c5ff;
+                        color: $skyblue;
+                        border: solid 2px $skyblue;
                         padding: 8px 20px;
                         float: right;
                         margin: 28px 40px 0px 840px;
@@ -84,7 +85,7 @@
                       &__group-member {
                         padding-left: 340px;
                         font-size: 12px;
-                        color: #999999;
+                        color: $information-gray;
                         clear: both;
                       }
             }
@@ -92,14 +93,28 @@
                       clear: both;
                       padding: 146px 40px 40px 340px;
                       position: relative;
-                      &__name {
-                        padding-right: 10px;
-                      }
-                      &__text {
-                      }
+                        &__message-block {
+                                  padding-bottom: 40px;
+                                    &__name {
+                                      margin-right: 10px;
+                                      font-size: 16px;
+                                      color: $black;
+                                      font-weight: bold;
+                                      display: inline-block;
+                                    }
+                                    &__time {
+                                      font-size: 12px;
+                                      color: $information-gray;
+                                      display: inline-block;
+                                    }
+                                    &__text {
+                                      font-size: 14px;
+                                      color: $black;
+                                    }
+                        }
             }
             &__footer {
-              background-color: #DDDDDD;
+              background-color: $footer-gray;
               height: 90px;
               position: absolute;
               bottom: 0;
@@ -107,12 +122,12 @@
               position: fixed;
                       &__form {
                         padding-left: 340px;
-                                            &__message {
+                                            &__message-form {
                                               margin-top: 20px;
                                               height: 50px;
                                               width: 940px;
                                               text-indent: 10px;
-                                              color: #434A54;
+                                              color: $black;
                                               font-size: 16px;
                                             }
                                             &__label {
@@ -124,9 +139,9 @@
                                                       }
                                             }
                                             &__send-button {
-                                              background-color: #38AFE0;
+                                              background-color: $blue;
                                               height: 50px;
-                                              color: #FFFFFF;
+                                              color: $white;
                                               width: 100px;
                                               margin-top: 20px;
                                               margin-bottom: 20px;

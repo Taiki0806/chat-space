@@ -10,19 +10,24 @@
     %p.sidebar__group-list__title taiki
     %p.sidebar__group-list__comment hello
 
-/ menuview
+/ mainview
 .chat-main
   .chat-main__header
     %p.chat-main__header__group-name sampleグループ
     %a.chat-main__header__edit-button{href: "#"} Edit
     %p.chat-main__header__group-member Member
   .chat-main__content
-    .chat-main__message
-      %p.chat-main__message__name taiki
-      %p.chat-main__message__text yahoo!
+    .chat-main__content__message-block
+      %p.chat-main__content__message-block__name taiki
+      %p.chat-main__content__message-block__time 2018/12/02 06:20:27
+      %p.chat-main__content__message-block__text yahoo!
+    .chat-main__content__message-block
+      %p.chat-main__content__message-block__name taiki
+      %p.chat-main__content__message-block__time 2018/12/02 06:20:27
+      %p.chat-main__content__message-block__text yahoo!
   .chat-main__footer
     %form.chat-main__footer__form
-      %input.chat-main__footer__form__message{type: "text", placeholder: "type a message"}
+      %input.chat-main__footer__form__message-form{type: "text", placeholder: "type a message"}
       %label.chat-main__footer__form__label{for: "icon"}
         %input.chat-main__footer__form__label__file{type: "file", id: "icon"}
         %i.chat-main__footer__form__label__picture.fa.fa-picture-o
