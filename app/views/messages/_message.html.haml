@@ -1,0 +1,10 @@
+.chat-main__content__message-block
+  %p.chat-main__content__message-block__name
+    = message.user.name
+  %p.chat-main__content__message-block__time
+    = message.created_at
+  - if message.comment.present?
+    %p.chat-main__content__message-block__text
+      = message.comment
+  .chat-main__content__message-block__picture
+  = image_tag message.image.url, class: "chat-main__content__message-block__image" if message.image.present?
