@@ -1,25 +1,10 @@
-.flash
-
-/ sidebar
-.sidebar
-  .sidebar__user-menu
-    %p.sidebar__user-menu__user-name
-      = current_user.name
-    %a.sidebar__user-menu__list
-      = link_to edit_user_path(current_user) do
-        = fa_icon "cog", class: 'sidebar__user-menu__edit-link'
-    %a.sidebar__user-menu__list
-      = link_to new_group_path do
-        = fa_icon "pencil-square-o", class: 'sidebar__user-menu__new-link'
-  .sidebar__group-list
-    %p.sidebar__group-list__title taiki
-    %p.sidebar__group-list__comment hello
+= render "layouts/side_bar"
 
 / mainview
 .chat-main
   .chat-main__header
     %p.chat-main__header__group-name sampleグループ
-    %a.chat-main__header__edit-button{href: "#"} Edit
+    %a.chat-main__header__edit-button{href: "/groups/1/edit"} Edit
     %p.chat-main__header__group-member Member
   .chat-main__content
     .chat-main__content__message-block
