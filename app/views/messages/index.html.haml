@@ -4,7 +4,7 @@
 .chat-main
   .chat-main__header
     %p.chat-main__header__group-name sampleグループ
-    %a.chat-main__header__edit-button{href: "/groups/1/edit"} Edit
+    = link_to 'Edit', '/groups/1/edit', class: "chat-main__header__edit-button"
     %p.chat-main__header__group-member Member
   .chat-main__content
     .chat-main__content__message-block
