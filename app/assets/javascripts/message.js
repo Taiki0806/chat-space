@@ -6,7 +6,7 @@ $(function() {
               <img src="${message.image}", class="chat-main__content__message-block__image">`
               : "";
 
-    var html = `<div class="chat-main__content__message-block">
+    var html = `<div class="chat-main__content__message-block" data-id="${message.id}">
                   <p class="chat-main__content__message-block__name">
                     ${message.user_name}
                   </p>
@@ -46,4 +46,33 @@ $(function() {
       $(".chat-main__footer__form__send-button").prop("disabled", false);
     });
   });
+
+
+  setInterval(update, 5000);
+
+  function update(){
+    if($(".chat-main__content__message-block")[0]){
+    var messageId = $(".chat-main__content__message-block:last").data("id");
+  } else {
+    var messageId = 0;
+  }
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      data: { lastMessage: messageId },
+      dataType: 'json'
+    })
+    .done(function(messages){
+      var insertHTML = "";
+      if (messages.length !== 0) {
+      messages.forEach(function(message){
+          insertHTML += buildHTML(message);
+      });
+      $(".chat-main__content").append(insertHTML);
+      }
+    })
+    .fail(function(data){
+      alert("自動更新に失敗しました")
+    });
+  }
 });
