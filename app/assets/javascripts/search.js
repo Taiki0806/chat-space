@@ -58,6 +58,7 @@ $(function() {
       var userId = $(this).data('user-id');
       var userName = $(this).data('user-name');
       appendMember(userId, userName);
+    $(this).parent().remove();
   });
 
   $(document).on("click", ".user-search-remove", function(){

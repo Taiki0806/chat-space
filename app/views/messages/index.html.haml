@@ -7,7 +7,7 @@
   .chat-main__header
     %p.chat-main__header__group-name
       = @group.name
-    = link_to 'Edit', '/groups/1/edit', class: "chat-main__header__edit-button"
+    = link_to 'Edit', 'edit', class: "chat-main__header__edit-button"
     %p.chat-main__header__group-member
       Members:
       - @group.members.each do |member|
