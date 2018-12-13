@@ -1,6 +1,5 @@
 $(function() {
   function buildHTML(message) {
-    var imageUrl = "";
     var imageUrl = (message.image)?
            `<div class="chat-main__content__message-block__picture"></div>
               <img src="${message.image}", class="chat-main__content__message-block__image">`
@@ -18,7 +17,7 @@ $(function() {
                   </p>
                     ${imageUrl}
                 </div>`
-                  return html
+                  return html;
   }
 
   $(document).on('submit', "#new_message", function(e){
@@ -65,10 +64,11 @@ $(function() {
     .done(function(messages){
       var insertHTML = "";
       if (messages.length !== 0) {
-      messages.forEach(function(message){
+        messages.forEach(function(message){
           insertHTML += buildHTML(message);
-      });
-      $(".chat-main__content").append(insertHTML);
+          $(".chat-main__content").append(insertHTML);
+        });
+        $("html,body").animate({scrollTop: $("html,body")[0].scrollHeight}, 'fast');
       }
     })
     .fail(function(data){
